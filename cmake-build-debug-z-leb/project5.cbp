@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="project5"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project5">
+				<Option output="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/project5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/users/guest/t/tw443/proj5/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 project5"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project5/fast">
+				<Option output="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/project5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/t/tw443/proj5/cmake-build-debug-z-leb"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/users/guest/t/tw443/proj5/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 project5/fast"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/t/tw443/proj5/cmake-build-debug-z-leb/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/users/guest/t/tw443/proj5/Add.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Add.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Automaton.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/ColonAutomaton.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/ColonAutomaton.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/ColonDashAutomaton.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/ColonDashAutomaton.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Comma.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Comma.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Comment.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Comment.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Database.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Database.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/DatalogProgram.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/DatalogProgram.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Facts.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Facts.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Graph.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Graph.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Header.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Header.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/ID.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/ID.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Left_Paren.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Left_Paren.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Lexer.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Lexer.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Multiply.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Multiply.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Parameter.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Parameter.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Parser.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Parser.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Period.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Period.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Predicate.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Predicate.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Q_Mark.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Q_Mark.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Queries.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Queries.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Relation.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Relation.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Right_Paren.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Right_Paren.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Rule.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Rule.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Rules.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Rules.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Schemes.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Schemes.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/String.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/String.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Token.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Token.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Tuple.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/Tuple.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/interpreter.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/interpreter.h">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/main.cpp">
+			<Option target="project5"/>
+		</Unit>
+		<Unit filename="/users/guest/t/tw443/proj5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
