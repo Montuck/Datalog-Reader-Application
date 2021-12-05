@@ -6,11 +6,13 @@
 #define TIRED3_INTERPRETER_H
 #include "DatalogProgram.h"
 #include "Database.h"
+#include "Graph.h"
 
 class interpreter {
 private:
     DatalogProgram* data;
     Database dBase;
+    Graph graph;
 
 public:
     bool done = true;

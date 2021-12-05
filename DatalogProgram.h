@@ -16,6 +16,7 @@ private:
     vector<Predicate*> queries;
     vector<Rule*> rules;
     friend class interpreter;
+    friend class Graph;
 
 public:
 

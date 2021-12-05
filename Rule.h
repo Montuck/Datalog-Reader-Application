@@ -12,6 +12,7 @@ private:
     vector<Predicate*> bodyPredicates;
     friend class interpreter;
     //friend class DatalogProgram;
+    friend class Graph;
 
 public:
     //vector<Predicate*> bodyPredicates;
