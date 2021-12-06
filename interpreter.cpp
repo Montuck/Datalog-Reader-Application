@@ -99,13 +99,31 @@ Relation interpreter::evaluatePredicate(Predicate p) {
 }
 
 void interpreter::evaluate() {
-    int schemeCounter = 0;
+    //organize rules into graphs
+    graph.buildGraphs(data);
+    cout << "Dependency Graph" << endl;
+    graph.printGraph();
+    int edgeCounter = 0;
+    for (auto m : graph.antiEdges) {
+        graph.treeOrder(edgeCounter);
+        edgeCounter++;
+    }
+
+    //for debugging
+    /*
+    while (!graph.postorder.empty()) {
+        cout << "R" << to_string(graph.postorder.top()) << ",";
+        graph.postorder.pop();
+    }
+    cout << endl << endl;
+     */
+
     //evaluate rules
+    int schemeCounter = 0;
     cout << "Rule Evaluation" << endl;
     while (done) {
         done = false;
         Relation relObj("", "");
-        //cout << data->rules.at(schemeCounter)->getRString() << "." << endl;
         for (int i = 0; i < data->rulesSize(); i++) {
             printRules(ruleEvaluation(*data->rules.at(i)), i);
         }
