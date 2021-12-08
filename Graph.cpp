@@ -11,7 +11,7 @@ void Graph::buildGraphs(DatalogProgram *data) {
         set<int> toAdd;
 
         //compare each rule body predicate to the head predicate of each rule
-        for (int j = 0; j < data->rules.at(i)->bodyPredicates.size(); j++) {
+        for (unsigned int j = 0; j < data->rules.at(i)->bodyPredicates.size(); j++) {
             for (int k = 0; k < data->rulesSize(); k++) {
                 if (data->rules.at(k)->headPredicate.id == data->rules.at(i)->bodyPredicates.at(j)->id) {
 
@@ -75,12 +75,21 @@ void Graph::printGraph() {
         string toPrint = "";
         toPrint += "R" + to_string(m.first) + ':' + ' ';
         for (auto s : m.second) {
-            toPrint += to_string(s) + ',';
+            toPrint += "R" + to_string(s) + ',';
         }
         toPrint.pop_back();
         cout << toPrint << endl;
     }
     cout << endl;
+}
+
+bool Graph::isLoop(int s) {
+    for (auto m : graphEdges.find(s)->second) {
+        if (m == s) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /*DFS forest reverse graph:

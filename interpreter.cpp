@@ -104,9 +104,12 @@ void interpreter::evaluate() {
     cout << "Dependency Graph" << endl;
     graph.printGraph();
     int edgeCounter = 0;
+    vector<set<int>> sccs;
     for (auto m : graph.antiEdges) {
         graph.treeOrder(edgeCounter);
         edgeCounter++;
+        sccs.push_back(graph.SCCs);
+        graph.SCCs.clear();
     }
 
     //for debugging
@@ -119,19 +122,29 @@ void interpreter::evaluate() {
      */
 
     //evaluate rules
-    int schemeCounter = 0;
     cout << "Rule Evaluation" << endl;
-    while (done) {
-        done = false;
+    for (int i = sccs.size()-1; i >= 0; i--) {
+        done = true;
+        cout << "SCC: R" << i << endl;
+        int schemeCounter = 0;
         Relation relObj("", "");
-        for (int i = 0; i < data->rulesSize(); i++) {
-            printRules(ruleEvaluation(*data->rules.at(i)), i);
+        for (auto s : sccs.at(i)) {
+            if (graph.isLoop(s)) {
+                while (done) {//FIXME dont do fixed point on nodes that don't loop
+                    done = false;
+                    printRules(ruleEvaluation(*data->rules.at(s)), s);
+                    schemeCounter++;
+                }
+            }
+            else {
+                printRules(ruleEvaluation(*data->rules.at(s)), s);
+                schemeCounter++;
+            }
         }
-        schemeCounter++;
+        cout << schemeCounter << " passes: R" << i << endl;
     }
 
-    //print how many schemes were populated
-    cout << endl << "Schemes populated after " << schemeCounter << " passes through the Rules." << endl << endl;
+    cout << endl;
 
     //evaluate queries
     cout << "Query Evaluation" << endl;
@@ -197,7 +210,6 @@ Relation interpreter::ruleEvaluation(Rule rule) {
     finalRelation.name = rule.headPredicate.id;
 
     //union finalRelation with matching relation from database
-    //FIXME I am not changing the tuples in finalRelation to print to reflect what was added in the Database
     bool tempdone = dBase.nameToRelation.at(finalRelation.name).unionOperation(finalRelation);
 
     if (done) {

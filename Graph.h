@@ -32,6 +32,7 @@ public:
     void SCCFinder();
     ////Integrate it all////
     void printGraph();
+    bool isLoop(int s);
 
 };
 
