@@ -22,14 +22,19 @@ void Graph::buildGraphs(DatalogProgram *data) {
         }
 
         //reverse set and add to reverse graph
-        for (auto s : toAdd) {
-            if (antiEdges.find(s) == antiEdges.end()) {
-                set<int> antiAdd;
-                antiAdd.insert(i);
-                antiEdges.insert(pair<int, set<int>>(s, antiAdd));
-            }
-            else {
-                antiEdges.find(s)->second.insert(i);
+        if (antiEdges.empty()) {
+            set<int> antiAdd;
+            antiEdges.insert(pair<int, set<int>>(i, antiAdd));
+        }
+        else {
+            for (auto s: toAdd) {
+                if (antiEdges.find(s) == antiEdges.end()) {
+                    set<int> antiAdd;
+                    antiAdd.insert(i);
+                    antiEdges.insert(pair<int, set<int>>(s, antiAdd));
+                } else {
+                    antiEdges.find(s)->second.insert(i);
+                }
             }
         }
 
@@ -55,25 +60,44 @@ void Graph::treeOrder(int n) {
         }
 
         //on the way back add to the postorder;
-        postorder.push(n);
-        SCCs.insert(n);
+        postorder.push_back(n);
     }
 }
-void Graph::dfsTree() {
 
-}
 ////DFS Forest Functions////
 void Graph::forestOrder() {
-
+    for (unsigned int i = 0; i < postorder.size(); i++) {
+        visited.insert(pair<int, bool> (postorder.at(i), false));
+    }
+    for (int i = postorder.size()-1; i >= 0; i--) {
+        dfsTree(graphEdges.find(postorder.at(i))->second, postorder.at(i));
+        SCCs.push_back(toAdd);
+        toAdd.clear();
+    }
 }
-void Graph::SCCFinder() {
-
+void Graph::dfsTree(set<int> edges, int node) { //FIXME need to finish conditions
+    bool nodesVisited = true;
+    for (auto s : edges) {
+        if (visited.find(s)->second == false) {
+            nodesVisited = false;
+        }
+    }
+    if(edges.empty() || nodesVisited) {
+        visited.find(node)->second = true;
+    }
+    else {
+        for (auto s : edges) {
+            dfsTree(graphEdges.find(postorder.at(s))->second, postorder.at(s));
+        }
+    }
+    toAdd.insert(node);
 }
+
 ////Integrate it all////
 void Graph::printGraph() {
     for (auto m : graphEdges) {
         string toPrint = "";
-        toPrint += "R" + to_string(m.first) + ':' + ' ';
+        toPrint += "R" + to_string(m.first) + ':';
         for (auto s : m.second) {
             toPrint += "R" + to_string(s) + ',';
         }
@@ -106,8 +130,10 @@ for node in postorder
 end
 
 DFS(node):
-mark node as visitedfor each node in adjacency list
+mark node as visited
+ for each node in adjacency list
 	if not visited
-		DFS(node)add node to postorder stack
+		DFS(node)
+		add node to postorder stack
 add to SCC
 end*/

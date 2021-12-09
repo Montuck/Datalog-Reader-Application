@@ -104,31 +104,29 @@ void interpreter::evaluate() {
     cout << "Dependency Graph" << endl;
     graph.printGraph();
     int edgeCounter = 0;
-    vector<set<int>> sccs;
     for (auto m : graph.antiEdges) {
         graph.treeOrder(edgeCounter);
         edgeCounter++;
-        sccs.push_back(graph.SCCs);
-        graph.SCCs.clear();
     }
+    graph.visited.clear();
+    graph.forestOrder();
 
     //for debugging
-    /*
-    while (!graph.postorder.empty()) {
-        cout << "R" << to_string(graph.postorder.top()) << ",";
-        graph.postorder.pop();
+
+    /*for (int i = 0; i < graph.postorder.size(); i++) {
+        cout << "R" << to_string(graph.postorder.at(i)) << ",";
     }
-    cout << endl << endl;
-     */
+    cout << endl << endl;*/
+
 
     //evaluate rules
     cout << "Rule Evaluation" << endl;
-    for (int i = sccs.size()-1; i >= 0; i--) {
+    for (int i = 0; i < graph.SCCs.size(); i++) {
         done = true;
         cout << "SCC: R" << i << endl;
         int schemeCounter = 0;
         Relation relObj("", "");
-        for (auto s : sccs.at(i)) {
+        for (auto s : graph.SCCs.at(i)) {
             if (graph.isLoop(s)) {
                 while (done) {//FIXME dont do fixed point on nodes that don't loop
                     done = false;
