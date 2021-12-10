@@ -121,9 +121,15 @@ void interpreter::evaluate() {
 
     //evaluate rules
     cout << "Rule Evaluation" << endl;
-    for (int i = 0; i < graph.SCCs.size(); i++) {
+    for (unsigned int i = 0; i < graph.SCCs.size(); i++) {
         done = true;
-        cout << "SCC: R" << i << endl;
+        cout << "SCC: ";
+        string toPrint = "";
+        for (auto s : graph.SCCs.at(i)) {
+            toPrint += "R" + to_string(s) + ",";
+        }
+        toPrint.pop_back();
+        cout << toPrint << endl;
         int schemeCounter = 0;
         Relation relObj("", "");
         for (auto s : graph.SCCs.at(i)) {
@@ -139,7 +145,7 @@ void interpreter::evaluate() {
                 schemeCounter++;
             }
         }
-        cout << schemeCounter << " passes: R" << i << endl;
+        cout << schemeCounter << " passes: " << toPrint << endl;
     }
 
     cout << endl;

@@ -76,16 +76,14 @@ void Graph::forestOrder() {
     }
 }
 void Graph::dfsTree(set<int> edges, int node) { //FIXME need to finish conditions
+    visited.find(node)->second = true;
     bool nodesVisited = true;
     for (auto s : edges) {
         if (visited.find(s)->second == false) {
             nodesVisited = false;
         }
     }
-    if(edges.empty() || nodesVisited) {
-        visited.find(node)->second = true;
-    }
-    else {
+    if(!edges.empty() && !nodesVisited) {
         for (auto s : edges) {
             dfsTree(graphEdges.find(postorder.at(s))->second, postorder.at(s));
         }
@@ -99,9 +97,11 @@ void Graph::printGraph() {
         string toPrint = "";
         toPrint += "R" + to_string(m.first) + ':';
         for (auto s : m.second) {
-            toPrint += "R" + to_string(s) + ',';
+            toPrint += "R" + to_string(s) + ",";
         }
-        toPrint.pop_back();
+        if (toPrint.at(toPrint.size()-1) == ',') {
+            toPrint.pop_back();
+        }
         cout << toPrint << endl;
     }
     cout << endl;
